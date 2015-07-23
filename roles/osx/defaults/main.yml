@@ -1,0 +1,26 @@
+---
+brew_packages:
+  - ansible
+  - ssh-copy-id
+  - bash
+  - postgresql
+  - tree
+  - bash-completion2
+  - mercurial
+  - python
+  - watch
+  - brew-cask
+  - openssl
+  - wget
+  - pgcli
+
+cask_packages:
+  - virtualbox
+  - vagrant
+  - emacs
+  - terraform
+
+cask_extra_packages:
+  - vault
+  - consul
+  - serf

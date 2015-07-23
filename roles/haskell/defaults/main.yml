@@ -1,0 +1,17 @@
+---
+packages: >
+  alex
+  happy
+  stylish-haskell
+  pointfree
+  configurator
+  blaze-html
+  iso8601-time
+  hlint
+  shake
+  pandoc
+  hoogle
+
+broken_packages: >
+  present
+  haskell-docs

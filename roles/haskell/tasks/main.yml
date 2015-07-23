@@ -1,0 +1,21 @@
+---
+- name: update cabal index
+  command: cabal update
+
+- name: enable cabal documentation
+  lineinfile:
+  args:
+    dest: ~/.cabal/config
+    regexp: '^.*documentation:.*$'
+    line: 'documentation: True'
+    state: present
+
+# unix constraint needed to make ghc-7.8.4 work on OSX-10.11
+- name: cabal install system packages
+  command: cabal install {{packages}} --constraint=unix>=2.7.1.0 --force-reinstalls
+
+- name: update cabal-install
+  command: cabal install cabal-install --constraint=unix>=2.7.1.0
+
+- name: update hoogle docs
+  command: hoogle data
